@@ -2,8 +2,13 @@ import Post from "@/interfaces/Post";
 import Link from "next/link";
 
 async function fetchPosts(): Promise<Post[]> {
-    const response = await fetch('https://api.vercel.app/blog');
-    return response.json();
+    try {
+        const response = await fetch('https://api.vercel.app/blog');
+        return response.json();
+    } catch (error) {
+        console.error('Error fetching posts:', error);
+        return []; // Return an empty array if there's an error
+    }
 }
 
 export default async function Page() {
