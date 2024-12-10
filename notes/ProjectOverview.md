@@ -12,3 +12,4 @@ This is a website for PIES.
 - CMS? ==> Sitecore?, Notion?, 
 - Code Quality ==> ESLint, Typescript
 - Deployment ==> Docker, 
+- 
